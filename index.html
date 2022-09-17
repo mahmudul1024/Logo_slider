@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/themes/splide-skyblue.min.css">
+
+        <link rel="stylesheet" href="index.css">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <div class="flexing">
+
+            <section class="splide" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide"><img src="./img1.png" alt=""></li>
+                        <li class="splide__slide"><img src="./img2.png" alt=""></li>
+                        <li class="splide__slide"><img src="./img3.png" alt=""></li>
+                        <li class="splide__slide"><img src="./img4.jpg" alt=""></li>
+                        <li class="splide__slide"><img src="./img5.jpg" alt=""></li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/js/splide.min.js"></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+
+
+
+
+        <script>
+            const splide = new Splide('.splide', {
+                type: 'loop',
+                drag: 'free',
+                focus: 'center',
+                perPage: 3,
+                pagination: false,
+
+                arrows: false,
+                autoScroll: {
+                    speed: 2,
+                },
+            });
+
+            splide.mount(window.splide.Extensions);
+        </script>
+    </body>
+</html>
